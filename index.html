@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
     <style>
         /*#container1{
             width: 100%;
@@ -289,7 +291,7 @@
                     <img src="assets/image/splited/2.jpg" alt="">
                 </div>
                 <div class="col" >
-                  <!--  <img src="assets/image/splited/1.jpg" alt="">-->
+                    <img src="assets/image/splited/1.jpg" alt="">
                 </div>
             </div>
 
@@ -298,4 +300,9 @@
 </section>
 </body>
 <script src="assets/boostrap/js/bootstrap.bundle.min.js"></script>
+<script>
+    $( function() {
+        $( ".row" ).sortable();
+    } );
+</script>
 </html>
