@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nilanga Chess Game</title>
+    <link rel="stylesheet" href="assets/boostrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/CSS/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Titan+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap" rel="stylesheet">
+    <style>
+        /*#container1{
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }*/
+        body{
+            overflow-x: hidden;
+
+        }
+        section{
+            width: 100%;
+            height: 100%;
+
+
+        }
+        #maindiv{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #0f5132;
+
+
+
+        }
+ /*       #div1{
+            width: 90%;
+            height:90%;
+            position: absolute;
+            background-color:#343a40;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            margin: auto;
+        }*/
+        .col{
+            width: 85px;
+            height:101px;
+            border: 3px solid black;
+            border-radius: 5px;
+        }
+        .col>img{
+            width: 224px;
+            height: 95px;
+            margin-left: -12px;
+            border-radius: 5px;
+        }
+        #image1{
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            z-index: 100;
+            top: 20px;
+           right: 55px;
+        }
+        #firsth1{
+            font-size: 13px;
+            z-index: 100;
+            position: absolute;
+            top: 76px;
+            right: 49px;
+            font-family: 'Fredoka One', cursive;
+            color: white;
+        }
+        #scorebar{
+            position: absolute;
+            width: 11%;
+            height: 65.5%;
+            right: 10px;
+            top: 108px;
+            background-color: #87A098;
+            z-index: 100;
+            border-radius: 5px;
+
+        }
+        #btnStart{
+            position: absolute;
+            width:150px;
+            height: 50px;
+            z-index: 100;
+            left: 20px;
+            font-size: 27px;
+            font-family: 'Fredoka One', cursive;
+            top: 275px;
+            border-radius: 10px;
+            background-color: #3DAC1E;
+
+        }
+        #btnFinish{
+            position: absolute;
+            font-size: 27px;
+            font-family: 'Fredoka One', cursive;
+            z-index: 100;
+            width:150px;
+            height: 50px;
+            left: 20px;
+            top: 375px;
+            border-radius: 10px;
+            background-color: #AA1919;
+        }
+        #scoreh1{
+            position: relative;
+            left: 45px;
+            font-size: 27px;
+            font-family: 'Fredoka One', cursive;
+        }
+        #scoreh1value{
+            position: relative;
+            top: -10px;
+            left: 57px;
+            color: #6a1a21;
+            font-size: 27px;
+            font-family: 'Fredoka One', cursive;
+        }
+        #correctMove{
+            position: relative;
+            left: 16px;
+            font-size: 18px;
+            font-family: 'Fredoka One', cursive;
+        }
+        #correctMoveValue{
+            position: relative;
+            top: -10px;
+            left: 57px;
+            color: #0b5ed7;
+            font-size: 27px;
+            font-family: 'Fredoka One', cursive;
+        }
+        #incorrectMove{
+            position: relative;
+            left: 14px;
+            font-size: 18px;
+            font-family: 'Fredoka One', cursive;
+        }
+        #incorrectMoveValue{
+            position: relative;
+            top: -10px;
+            left: 57px;
+            color: #AA1919;
+            font-size: 27px;
+            font-family: 'Fredoka One', cursive;
+        }
+        #status{
+            position: relative;
+            left: 9px;
+            top: 10px;
+            font-size: 32px;
+            font-family: 'Rubik Moonrocks', cursive;
+        }
+
+
+
+    </style>
+</head>
+<body >
+<section >
+    <img src="assets/image/jigsaw.png" alt="png" id="image1">
+    <h1 id="firsth1">Puzzle Game</h1>
+    <div id="scorebar">
+        <h1 id="scoreh1">Score</h1>
+        <h1 id="scoreh1value">000</h1>
+        <hr>
+        <h1 id="correctMove">Correct moves</h1>
+        <h1 id="correctMoveValue">000</h1>
+        <hr>
+        <h1 id="incorrectMove">Incorrect moves</h1>
+        <h1 id="incorrectMoveValue">000</h1>
+        <hr>
+        <h1 id="status">You Win..!</h1>
+    </div>
+
+        <button id="btnStart">Start</button>
+
+
+        <button id="btnFinish">Finish</button>
+
+    <div id="maindiv">
+        <div class="container mt-5"  style="background-color: #343a40 ; width: 75%" >
+            <div class="row" >
+                <div class="col">
+                    <img src="assets/image/splited/30.jpg" alt="">
+                </div>
+                <div class="col">
+                    <img src="assets/image/splited/29.jpg" alt="">
+                </div>
+                <div class="col">
+                    <img src="assets/image/splited/28.jpg" alt="">
+                </div>
+                <div class="col">
+                    <img src="assets/image/splited/27.jpg" alt="">
+                </div>
+                <div class="col">
+                    <img src="assets/image/splited/26.jpg" alt="">
+                </div>
+            </div>
+            <div class="row" >
+                <div class="col">
+                    <img src="assets/image/splited/25.jpg" alt="">
+                </div>
+                <div class="col">
+                    <img src="assets/image/splited/24.jpg" alt="">
+                </div>
+                <div class="col">
+                    <img src="assets/image/splited/23.jpg" alt="">
+                </div>
+                <div class="col">
+                    <img src="assets/image/splited/22.jpg" alt="">
+                </div>
+                <div class="col">
+                    <img src="assets/image/splited/21.jpg" alt="">
+                </div>
+            </div>
+            <div class="row" >
+                <div class="col">
+                    <img src="assets/image/splited/20.jpg" alt="">
+                </div>
+                <div class="col">
+                    <img src="assets/image/splited/19.jpg" alt="">
+                </div>
+                <div class="col">
+                    <img src="assets/image/splited/18.jpg" alt="">
+                </div>
+                <div class="col">
+                    <img src="assets/image/splited/17.jpg" alt="">
+                </div>
+                <div class="col">
+                    <img src="assets/image/splited/16.jpg" alt="">
+                </div>
+            </div>
+            <div class="row" >
+                <div class="col">
+                    <img src="assets/image/splited/15.jpg" alt="">
+                </div>
+                <div class="col">
+                    <img src="assets/image/splited/14.jpg" alt="">
+                </div>
+                <div class="col">
+                    <img src="assets/image/splited/13.jpg" alt="">
+                </div>
+                <div class="col">
+                    <img src="assets/image/splited/12.jpg" alt="">
+                </div>
+                <div class="col">
+                    <img src="assets/image/splited/11.jpg" alt="">
+                </div>
+            </div>
+            <div class="row" >
+                <div class="col">
+                    <img src="assets/image/splited/10.jpg" alt="">
+                </div>
+                <div class="col">
+                    <img src="assets/image/splited/9.jpg" alt="">
+                </div>
+                <div class="col">
+                    <img src="assets/image/splited/8.jpg" alt="">
+                </div>
+                <div class="col">
+                    <img src="assets/image/splited/7.jpg" alt="">
+                </div>
+                <div class="col">
+                    <img src="assets/image/splited/6.jpg" alt="">
+                </div>
+            </div>
+            <div class="row" >
+                <div class="col" >
+                    <img src="assets/image/splited/5.jpg" alt="">
+                </div>
+                <div class="col">
+                    <img src="assets/image/splited/4.jpg" alt="">
+                </div>
+                <div class="col">
+                    <img src="assets/image/splited/3.jpg" alt="">
+                </div>
+                <div class="col">
+                    <img src="assets/image/splited/2.jpg" alt="">
+                </div>
+                <div class="col" >
+                  <!--  <img src="assets/image/splited/1.jpg" alt="">-->
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+</body>
+<script src="assets/boostrap/js/bootstrap.bundle.min.js"></script>
+</html>
